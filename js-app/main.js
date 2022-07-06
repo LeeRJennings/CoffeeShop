@@ -60,17 +60,12 @@ addBVButton.addEventListener("click", () => {
     `
 })
 
-// const submitBeanButton = document.querySelector("#submit-bean-button")
 body.addEventListener("click", event => {
     event.preventDefault()
     if (event.target.id === "submit-bean-button") {
-        console.log("FUCKIN BUTTON CLICKED")
         let name = document.querySelector("input[name='name']").value
-        console.log(name)
         let region = document.querySelector("input[name='region']").value
-        console.log(region)
         let notes = document.querySelector("textarea[name='notes']").value
-        console.log(notes)
     
         const beanObj = {
             name: name,
@@ -79,7 +74,7 @@ body.addEventListener("click", event => {
         }
     
         addBeanVariety(beanObj)
-        // .then(bvList())
+        .then(bvList())
     }
 })
 
